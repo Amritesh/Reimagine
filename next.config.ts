@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: '/Reimagine',
+  basePath: process.env.NODE_ENV === 'production' ? '/Reimagine' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/Reimagine/' : '',
 };
 
 export default nextConfig;
