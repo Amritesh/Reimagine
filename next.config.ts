@@ -5,8 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/Reimagine' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/Reimagine/' : '',
+  // We'll let GitHub Actions handle the basePath via configure-pages if possible,
+  // or keep it simple for now to ensure 'out' is generated.
+  basePath: '/Reimagine',
 };
 
 export default nextConfig;
