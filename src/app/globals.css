@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FDFCFB;
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: 'Inter', var(--font-geist-sans);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+}
+
+.bg-warm-neutral {
+  background-color: #FDFCFB;
+}
+
+.text-deep-teal {
+  color: #0D9488;
+}
+
+.bg-deep-teal {
+  background-color: #0D9488;
+}
+
+.text-subtle-gold {
+  color: #D4AF37;
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
